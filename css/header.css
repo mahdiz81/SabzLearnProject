@@ -1,0 +1,277 @@
+/* استایل کلی منو */
+.main-header {
+    list-style: none; /* حذف نقطه‌های لیست */
+    padding: 0; /* حذف فاصله داخلی */
+    margin: 0; /* حذف فاصله خارجی */
+    background-color:var(--white-color); 
+   display: flex;
+}
+.main-header__navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+/* محتوای سمت راست هدر */
+.main-header__content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0.5rem;
+}
+
+/* سمت راست هدر */
+.main-header__right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 18.5rem;
+
+}
+
+/* دکمه جستجو سمت راست */
+.main-header__search-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.3rem;
+    height: 4.3rem;
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+/* دکمه سبد خرید سمت راست */
+.main-header__cart-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.3rem;
+    height: 4.3rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    margin-right: 1rem;
+    background-color: #f0f2f7;
+    
+}
+
+/* آیکون سبد خرید */
+.main-header__cart-icon:hover{
+    color: #1e83fe;
+}
+.main-header_search_icon{
+    color: var(--white-color);
+    font-size: 2rem;
+}
+.main-header__cart-icon{
+    color: var(--dark-color);
+    font-size: 2rem;
+    transition: all 400ms ease;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+}
+
+/* دکمه پروفایل سمت راست */
+.main-header__profile{
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    margin-right: 1rem;
+    transition: all 400ms ease;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    color: var(--primary-color);
+    height: 4.3rem;
+}
+.main-header__profile:hover{
+background-color: var( --primary-color);
+color: #f0f2f7;
+}
+
+/* dropDown-styles */
+
+/* استایل برای آیتم‌های منو */
+.main-header__item {
+    position: relative; /* موقعیت‌دهی برای ساب منو */
+}
+
+/* استایل لینک‌های منو */
+.main-header__link {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 2rem;
+    text-decoration: none;
+    transition: all 400ms ease;
+    font-size: 1.5rem;
+    color: var(--dark-color);
+}
+
+.main-header__link:hover {
+    color: #1e83f0;
+}
+
+/* استایل آیکون فلش */
+.main-header__link-icon {
+    margin-right: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+/* استایل زیرمنو */
+.main-header__subDropDown {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--white-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    padding: 1.5rem 2rem;
+    min-width: 24rem;
+    transition: visibility 2s, opacity 0.3s ease;
+    -webkit-transition: visibility 2s, opacity 0.3s ease;
+    -moz-transition: visibility 2s, opacity 0.3s ease;
+    -ms-transition: visibility 2s, opacity 0.3s ease;
+    -o-transition: visibility 2s, opacity 0.3s ease;
+}
+
+/* استایل لینک‌های ساب منو */
+.main-header__subDropDown li {
+    list-style: none;
+    margin-bottom: 0.5rem;
+}
+
+.main-header__subDropDown li:last-child {
+    margin-bottom: 0;
+}
+
+.main-header__subDropDown a {
+    display: block;
+    padding: 0.8rem 0.5rem;
+    color: var(--dark-color);
+    text-decoration: none;
+    font-size: 1.4rem;
+    position: relative; /* برای موقعیت‌دهی خط زیر */
+    overflow: hidden; /* برای جلوگیری از نمایش خط اضافی */
+}
+
+.main-header__subDropDown a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 15%;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    transition: transform 0.3s linear;
+   -webkit-transition: transform 0.3s linear;
+   -moz-transition: transform 0.3s linear;
+   -ms-transition: transform 0.3s linear;
+   -o-transition: transform 0.3s linear;
+}
+
+.main-header__subDropDown a:hover::after {
+    transform: translateX(-25px);
+    -webkit-transform: translateX(-25px);
+    -moz-transform: translateX(-25px);
+    -ms-transform: translateX(-25px);
+    -o-transform: translateX(-25px);
+}
+
+.main-header__subDropDown a:hover {
+    color: #1e83f0; /* تغییر رنگ متن در هاور */
+}
+
+
+/* نمایش ساب منو هنگام هاور بر روی آیتم والد */
+.main-header__item:hover .main-header__subDropDown {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* چرخش آیکون فلش هنگام هاور */
+.main-header__item:hover .main-header__link-icon {
+    transform: rotate(180deg);
+}
+
+.main-header__dropDown-link{
+    display: block;
+    padding: 0.6rem 2rem;
+    font-size: 1.4rem;
+    color: var(--dark-color);
+    transition: all 400ms ease-in;
+    -webkit-transition: all 400ms ease-in;
+    -moz-transition: all 400ms ease-in;
+    -ms-transition: all 400ms ease-in;
+    -o-transition: all 400ms ease-in;
+}
+
+/* Finish-dropDown-styles */
+
+.main-header__left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-header__link{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: relative;
+   
+
+}
+.main-header__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0 0.5rem;
+
+}
+.main-header__menue{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.main-header__item a:hover{
+color: #7f8187;
+}
+.main-header__link-icon{
+    margin-right: 0.8rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
