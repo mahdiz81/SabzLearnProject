@@ -6,6 +6,7 @@
 @import"./course-box.css";
 @import"./css/about-us.css";
 @import"./footer.css";
+@import"./pagination.css";
 
 /* Courses Section Styles */
 .courses {
@@ -256,36 +257,3 @@
     }
 }
 
-/* start course pagination */
-.courses-pagination{
-    margin: 3rem 0;
-}
-.courses-pagination-list{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.courses-pagination__link{
-    border-radius: 0.3rem;
-    -webkit-border-radius: 0.3rem;
-    -moz-border-radius: 0.3rem;
-    -ms-border-radius: 0.3rem;
-    -o-border-radius: 0.3rem;
-    background-color: #f0f0f1;
-    margin: 0 .5rem;
-    font-size: 1.5rem;
-    width: 4rem;
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.courses-pagination__link:hover{
-    background-color: var(--primary-color);
-    color: #f0f0f1;
-}
-.courses-pagination__active{
-    background-color: var(--primary-color);
-    color: #f0f0f1;
-}
-/* finish course pagination */
